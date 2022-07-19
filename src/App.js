@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Menu } from './components/Menu';
+
+import { Home } from './views/Home';
+import { ListarCliente } from './views/Cliente/ListarCliente';
+import { ListarCompra } from './views/Compra/ListarCompra';
+import { ListarEmpresa } from './views/Empresa/ListarEmpresa';
+import { ListarPromocao } from './views/Promocao/ListarPromocao';
+import { ListarCartao } from './views/Cartao/ListarCartao';
+import { CadastrarCliente } from './views/Cliente/CadastrarCliente';
+import { CadastrarEmpresa } from './views/Empresa/CadastrarEmpresa';
+import { CadastrarPromocao } from './views/Promocao/CadastrarPromocao';
+import { CadastrarCartao } from './views/Cartao/CadastrarCartao';
+import { CadastrarCompra } from './views/Compra/CadastrarCompra';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Menu/>
+        <Switch>
+          <Route exact path="/" component={Home}/>;
+          <Route path="/listar-cliente" component={ListarCliente}/>;
+          <Route path="/listar-compra" component={ListarCompra}/>;
+          <Route path="/listar-empresa" component={ListarEmpresa}/>;
+          <Route path="/listar-promocao" component={ListarPromocao}/>;
+          <Route path="/listar-cartao" component={ListarCartao}/>;
+          <Route path="/cadastrar-cliente" component={CadastrarCliente}/>;
+          <Route path="/cadastrar-empresa" component={CadastrarEmpresa}/>;
+          <Route path="/cadastrar-promocao" component={CadastrarPromocao}/>;
+          <Route path="/cadastrar-cartao" component={CadastrarCartao}/>;
+          <Route path='/cadastrar-compra' component={CadastrarCompra}/>;
+        </Switch>
+      </Router>
     </div>
   );
 }
