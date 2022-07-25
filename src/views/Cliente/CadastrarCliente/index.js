@@ -51,12 +51,12 @@ export const CadastrarCliente = () => {
     return (
         <Container>
             <div className="d-flex">
-                <div className="m-auto p-2">
+                <div className="p-2">
                     <h1>Cadastrar Cliente</h1>
                 </div>
-                <div className="p-2">
+                <div className="m-auto p-2">
                     <Link to="/listar-cliente"
-                        className="btn btn-outline-primary btn-sm">Cliente</Link>
+                        className="btn btn-outline-primary btn-sm">Clientes</Link>
                 </div>
             </div>
             <hr className="m=1" />

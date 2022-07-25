@@ -37,7 +37,7 @@ export const ListarCartao = () => {
             <Container>
                 <div className="d-flex">
                 <div>
-                <h1>Visualizar informações do cliente</h1>
+                <h1>Visualizar informações do cartão</h1>
                 </div>
                 <div className="m-auto p-2">
                     <Link to="cadastrar-cartao"

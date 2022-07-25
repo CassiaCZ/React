@@ -13,6 +13,7 @@ import { CadastrarEmpresa } from './views/Empresa/CadastrarEmpresa';
 import { CadastrarPromocao } from './views/Promocao/CadastrarPromocao';
 import { CadastrarCartao } from './views/Cartao/CadastrarCartao';
 import { CadastrarCompra } from './views/Compra/CadastrarCompra';
+import { CartaoCliente } from './views/Cliente/CartaoCliente';
 
 
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/cadastrar-promocao" component={CadastrarPromocao}/>;
           <Route path="/cadastrar-cartao" component={CadastrarCartao}/>;
           <Route path='/cadastrar-compra' component={CadastrarCompra}/>;
+          <Route path='/cartao-cliente/:id' component={CartaoCliente}/>;
         </Switch>
       </Router>
     </div>
